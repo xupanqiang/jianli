@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
+    <title>徐盼强的个人简历</title>
+    <link href="css/fullPage.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--头部开始-->
+    <header class="header">
+        <div class="head">
+            <div class="logo"></div>
+            <nav class="nav">
+                <ul id="navBar">                
+                    <li class="current">
+                        <a href="#n1">个人简历<br/><b>RESUME</b></a>
+                    </li>
+                    <li>
+                        <a href="#n2">专业技能<br/><b>SKILL</b></a>
+                    </li>
+                    <li>
+                        <a href="#n4">我的经历<br/><b>EXPERIENCE</b></a>
+                    </li>
+                    <li>
+                        <a href="#n3">我的作品<br/><b>DEMO</b></a>
+                    </li>
+                    <li>
+                        <a href="#n3">联系我<br/><b>CONTACT ME</b></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div id="pageContain">
+        <div class="page page1 current">
+            <div class="contain">
+                <p class="txt">第一屏</p>
+            </div>
+        </div>
+
+        <div class="page page2">
+            <div class="contain">
+                <p class="txt">第二屏</p>
+            </div>
+        </div>
+
+        <div class="page page3">
+            <div class="contain">
+                <p class="txt">第三屏</p>
+            </div>
+        </div>
+
+        <div class="page page4">
+            <div class="contain">
+                <p class="txt">第四屏</p>
+            </div>
+        </div>
+
+        <div class="page page5">
+            <div class="contain">
+                <p class="txt">第五屏</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/fullPage.min.js"></script>
+    <script>
+    var runPage;
+    runPage = new FullPage({
+        id: 'pageContain',
+        slideTime: 800,
+        effect: {
+            transform: {
+                translate: 'Y'
+            },
+            opacity: [0, 1]
+        },
+        mode: 'wheel, touch, nav:navBar',
+        easing: 'ease',
+        callback: function(index, thisPage){
+            // alert('滚动到了第 ' + (index + 1) + ' 屏');
+        }
+    });
+    </script>
+</body>
+</html>
