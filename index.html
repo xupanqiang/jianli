@@ -4,16 +4,21 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="content-type">
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
-    <title>徐盼强的个人简历</title>
-    <link href="css/fullPage.css" rel="stylesheet" type="text/css" />
+    <title>web前端-徐盼强</title>
+    <link href="css/fullPage.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
 </head>
 
 <body>
     <!--头部开始-->
     <header class="header">
         <div class="head">
-            <div class="logo"></div>
+            <div class="logo">
+                <img src="img/resume01.png">
+                <h1>求职：前端工程师</h1>
+            </div>
             <nav class="nav">
                 <ul id="navBar">                
                     <li class="current">
@@ -26,10 +31,10 @@
                         <a href="#n4">我的经历<br/><b>EXPERIENCE</b></a>
                     </li>
                     <li>
-                        <a href="#n3">我的作品<br/><b>DEMO</b></a>
+                        <a href="#n5">我的作品<br/><b>DEMO</b></a>
                     </li>
                     <li>
-                        <a href="#n3">联系我<br/><b>CONTACT ME</b></a>
+                        <a href="前端-徐盼强.pdf" target="_blank">下载简历<br/><b>CONTACT ME</b></a>
                     </li>
                 </ul>
             </nav>
@@ -37,36 +42,219 @@
     </header>
     <!--头部结束-->
     <div id="pageContain">
+        <!--个人简历-->
         <div class="page page1 current">
-            <div class="contain">
-                <p class="txt">第一屏</p>
+            <div class="resume">
+                <div class="loimg">
+                    <img src="img/logo.jpg">
+                    <h2>你没有变强，是因为你一直很舒服</h2>
+                    <p>徐盼强</p>
+                    <p>前端工程师</p>
+                    <p>河南</p>
+                    <p>计算机专修学院</p>
+                    <p>541592004@qq.com</p>
+                </div>
             </div>
         </div>
-
+        <!--个人简历-->
         <div class="page page2">
-            <div class="contain">
-                <p class="txt">第二屏</p>
+            <div class="skill">
+                <div class="main-home">
+                    <div class="main-he">
+                        <h1>SKILL / 专业技能</h1>
+                        <p class="servic-p">Learn what</p>
+                    </div>
+                    <ul class="main-servic">
+                        <li> <u class="cl"></u> <u class="cr"></u>
+                            <a href="#"> <i></i>
+                                <h3 class="servic-h3">HTML</h3>
+                                <div class="hon">
+                                    <p class="hon-z">深刻理解Web标准</p>
+                                    <p>熟练运用html标签</p>
+                                    <p>熟悉xml及xhtml标记语言</p>
+                                    <p>掌握html5如，video，audio新特性</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <u class="cl"></u>
+                            <u class="cr"></u>
+                            <a href="#"> <i class="ydd"></i>
+                                <h3 class="servic-h3">CSS</h3>
+                                <div class="hon">
+                                    <p class="hon-z">熟练运用css及css3新属性</p>
+                                    <p>熟练掌握css3动画效果和布局</p>
+                                    <p>注重浏览器兼容性，熟悉常见的css hack</p>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <u class="cl"></u>
+                            <u class="cr"></u>
+                            <a href="#">
+                                <i class="appkf"></i>
+                                <h3 class="servic-h3">JavaScript</h3>
+                                <div class="hon">
+                                    <p class="hon-z">掌握jQuery库</p>
+                                    <p>注重JavaScript性能优化</p>
+                                    <p>掌握ajax的运作原理及json数据结构</p>
+                                    <p>正在不断学习原生JavaScript，了解js闭包等</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <u class="cl"></u>
+                            <u class="cr"></u>
+                            <a href="#">
+                                <i class="uisj"></i>
+                                <h3 class="servic-h3">AngularJs</h3>
+                                <div class="hon">
+                                    <p class="hon-z">模块组件化</p>
+                                    <p>熟练的指令编写</p>
+                                    <p>了解双绑的背后实现</p>
+                                    <p>正在不断钻研AngularJs</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
             </div>
         </div>
-
+        <!--我的经历-->
         <div class="page page3">
-            <div class="contain">
-                <p class="txt">第三屏</p>
+            <div class="experience">
+                <div class="main-home">
+                    <div class="main-he">
+                        <h1 class="about-h1">EXPERIENCE / 我的经历</h1>
+                    </div>
+                    <div class="main-servic">
+                        <div class="company">
+                            <div class="ad" >
+                                 <ul class="slider" >
+                                    <li>
+                                        <h2>天下互联信息科技有限公司(2013.8-2016.4)</h2>
+                                        <p>1.负责公司天象客户端项目模板的HTML5界面工程师工作，与移动互联网产品的前端系统设计、开发与实现。</p>
+                                        <p>2.与UI或产品经理配合完成前台页面/移动端页面的界面制作、交互开发、交互效果优化。</p>
+                                        <p>3.利用DIV+CSS，JavaScript，JQuery技术进行PC端、移动端产品界面的前端开发。</p>
+                                        <p>4.通过H5和CSS3构建移动端页面 jq.mobi开发实现场景的页面及效果。</p>
+                                        <p>5.利用angular.JS框架进行路由的跳转和各大模块里面的实时监听。。</p>
+                                    </li>
+                                    <li>
+                                        <h2>博易智软技术股份有限公司(2016.5-2017.1)</h2>
+                                        <p>1.负责PC端应用页面搭建。</p>
+                                        <p>2.负责日常更新,维护工作，前端代码优化。</p>
+                                        <p>3.利用html5/css3和js对页面进行优化及功能上的改进。</p>
+                                        <p>4.负责上线后的项目优化以提高页面的响应速度维护以及优化网站前端性能，提高用户体验。</p>
+                                        <p>5.项目中运用jquery esayui框架实现table树、table页面的编写，平台页面调用的echarts图表库实现数据显示。</p>
+                                    </li>
+                                  </ul>
+                                  <ul class="num" >
+                                    <li class="on">天下互联</li>
+                                    <li>博易股份</li>
+                                  </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
+        <!--我的作品-->
         <div class="page page4">
-            <div class="contain">
-                <p class="txt">第四屏</p>
+            <div class="experience">
+                <div class="main-home">
+                    <div class="main-he">
+                        <h1 class="about-h1">DEMO / 我的作品</h1>
+                    </div>
+                    <div class="exper">
+                        <ul>
+                            <li>
+                                <img src="img/2.jpg" class="exp">
+                                <span class="intro"></span>
+                                <div class="had-link">
+                                    <p class="int-had">轻蚁传播</p>
+                                    <p class="int-link"><a href="http://www.yesv5.com/" target="_blank"><img src="img/link.png" alt="轻蚁传播"></a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/1.jpg" class="exp">
+                                <span class="intro"></span>
+                                <div class="had-link">
+                                    <p class="int-had">博易股份</p>
+                                    <p class="int-link"><a href="http://www.byitgroup.com/" target="_blank"><img src="img/link.png" alt="博易股份"></a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/4.jpg" class="exp">
+                                <span class="intro"></span>
+                                <div class="had-link">
+                                    <p class="int-had">五洲康泰</p>
+                                    <p class="int-link"><a href="http://www.med-w.com/" target="_blank"><img src="img/link.png" alt="博易股份"></a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/3.jpg" class="exp">
+                                <span class="intro"></span>
+                                <div class="had-link">
+                                    <p class="int-had">中大科慧</p>
+                                    <p class="int-link"><a href="http://www.zdkh.net/"  target="_blank"><img src="img/link.png" alt="中大科慧"></a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/pic4.jpg" class="exp">
+                                <span class="intro"></span>
+                                <div class="had-link">
+                                    <p class="int-had">情景传播</p>
+                                    <p class="int-link"><img src="img/qingjing.png" alt=""></p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/pic1.jpg" class="exp">
+                                <span class="intro"></span>
+                                <div class="had-link">
+                                    <p class="int-had">房产</p>
+                                    <p class="int-link"><img src="img/fangchan.png" alt=""></p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/pic2.jpg" class="exp">
+                                <span class="intro"></span>
+                                <div class="had-link">
+                                    <p class="int-had">汽车</p>
+                                    <p class="int-link"><img src="img/qiche.png" alt=""></p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/pic3.jpg" class="exp">
+                                <span class="intro"></span>
+                                <div class="had-link">
+                                    <p class="int-had">旅游</p>
+                                    <p class="int-link"><img src="img/lvyou.png" alt=""></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="page page5">
-            <div class="contain">
-                <p class="txt">第五屏</p>
-            </div>
+            <div class="bg4"></div>
         </div>
     </div>
+    <!--右侧悬浮开始-->
+    <div class="side">
+        <ul>
+            <li>
+                <a href="tencent://message/?uin=541592004&Site=qq&Menu=yes" target="_blank">
+                    <img src="img/img1.png" /></a>
+            </li>
+            <li>
+                <img src="img/img2.png" />
+            </li>
+            <li class="gototop">
+                <img src="img/img3.png" />
+            </li>
+        </ul>
+    </div>
+    <!--右侧悬浮结束-->
 
     <script src="js/fullPage.min.js"></script>
     <script>
@@ -83,7 +271,12 @@
         mode: 'wheel, touch, nav:navBar',
         easing: 'ease',
         callback: function(index, thisPage){
-            // alert('滚动到了第 ' + (index + 1) + ' 屏');
+            if(index==0){
+               // alert("第一屏");
+            }
+            if(index==1){
+                // alert("第二屏");
+            }
         }
     });
     </script>
