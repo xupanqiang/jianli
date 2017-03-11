@@ -7,10 +7,9 @@
 .swipe { display: block; z-index: 3; transition-duration: 0ms !important; -webkit-transition-duration: 0ms !important;}
 .page1 { background: url(../img/bg1.jpg) fixed no-repeat center 0px;background-size: cover;}
 .page2 { background: url(../img/bg2.jpg) fixed no-repeat center 0px;background-size: cover;}
-.page3 { background: #992211;}
-.page4 { background: #ff00ff;}
-.page5 { background: #00ff00;}
-.page6 { background: #22ffff;}
+.page3 { background: url(../img/bg3.jpg) fixed no-repeat center 0px;}
+.page4 { background: #f2f2f2;}
+
 
 #navBar .active { background: #e60012;color: #fff;}
 /*#navBar li { cursor: pointer; margin-bottom: 10px; transition: all .7s ease; border-radius: 50%; line-height: 40px; text-align: center; width: 40px; height: 40px;}*/
