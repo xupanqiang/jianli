@@ -40,6 +40,7 @@ $(function(){
     $('.closebtn').on('click touchstart',function(){
         storeDisplay();  //存储信息，将存储属性设置为"1"
         $('.noticemask').hide();
+        pin();
     });
     //本地存储访客是否第一次访问
     var strModel="value";
@@ -59,6 +60,7 @@ $(function(){
         $('.noticemask').show();
     } else {
     	$('.noticemask').hide();
+    	pin();
     }
 	
 	//底部点击查号关闭弹出右侧栏
@@ -72,13 +74,16 @@ $(function(){
     });
 	
 	//首页出现
-    $(".header").animate({opacity:"1"},1000,function(){
-    	$(".loimg img").animate({opacity:"1"},1000,function(){
-			$(".loimg h2").animate({opacity:"1"},1000,function(){
-				$(".loimg p").addClass("sh");
+	function pin(){
+		$(".header").animate({opacity:"1"},1000,function(){
+	    	$(".loimg img").animate({opacity:"1"},1000,function(){
+				$(".loimg h2").animate({opacity:"1"},1000,function(){
+					$(".loimg p").addClass("sh");
+				});
 			});
 		});
-	});
+	}
+    
 	
 	//整屏幕滚动
 	var runPage;
