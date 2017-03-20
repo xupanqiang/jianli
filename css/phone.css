@@ -1,0 +1,21 @@
+@media screen and (max-width:768px) {
+html {font-size: 87.5% !important;}
+.header{overflow: auto;}
+
+.logo{width:100%;text-align:center}
+.logo img {
+    width: auto;
+    height: 70px;
+}
+.nav{}
+
+
+.noticemask .notice{
+	width: 80%;
+    height: 57%;
+    margin:0;
+    top: 20%;
+    left: 10%;
+}
+
+}
