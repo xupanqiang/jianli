@@ -36,62 +36,12 @@ $(function(){
 			} else {
 				$(".exper>ul>li:lt(4)").css("display","block");
 				$(".exper>ul>li:lt(4) .int-link img").css("width","auto");
+				$(".exper>ul>li:gt(3) a").attr("onclick","return false");
 			} 
 			}
 		}
 	});
 	
-	
-	//公告部分 ---离线储存
-    //点击小差号，关闭弹出层
-    $('.closebtn').on('click touchstart',function(){
-        storeDisplay();  //存储信息，将存储属性设置为"1"
-        $('.noticemask').hide();
-        pin();
-    });
-    //本地存储访客是否第一次访问
-    var strModel="value";
-    //公告调用
-    var storeDisplay=function(){
-    var modelDisplay=1;      //定义存储对象的属性值
-    //存储，IE6~IE7 cookie 其他浏览器HTML5本地存储
-    if(window.localStorage) {
-        localStorage.setItem(strModel,modelDisplay);  //进行本地存储
-        } else {
-        Cookie.write(strModel,modelDisplay);   //进行Cookie存储
-        }
-    };
-    //检测触发是否显示弹窗
-    var strStoreDate=window.localStorage ? localStorage.getItem(strModel) : Cookie.read(strModel);      //检测浏览器是否支持localStorage
-	if(strStoreDate != "1"){    //如果属性值不为1则显示弹框
-        $('.noticemask').show();
-    } else {
-    	$('.noticemask').hide();
-    	pin();
-    }
-	
-	//底部点击查号关闭弹出右侧栏
-	$('.closenotice').on('click',function(){
-        $('.upgradeNotice').slideUp("slow");
-//      $('.side').show();
-    });
-    $('.gototop').on('click',function(){
-        $('.upgradeNotice').slideDown("slow");
-//      $('.side').hide();
-    });
-	
-	//首页出现动画
-	function pin(){
-		$(".header").animate({opacity:"1"},1000,function(){
-	    	$(".loimg img").animate({opacity:"1"},1000,function(){
-				$(".loimg h2").animate({opacity:"1"},1000,function(){
-					$(".loimg p").addClass("sh");
-				});
-			});
-		});
-	};
-	
-
 	
 	//整屏幕滚动
     $('#pageContain').fullpage({
@@ -122,6 +72,18 @@ $(function(){
 		}
 	});
 	
+	
+	//底部点击查号关闭弹出右侧栏
+	$('.closenotice').on('click',function(){
+        $('.upgradeNotice').slideUp("slow");
+//      $('.side').show();
+    });
+    $('.gototop').on('click',function(){
+        $('.upgradeNotice').slideDown("slow");
+//      $('.side').hide();
+    });
+	
+	
 	//我的作品更多
 	$('.servic-p i').on('click',function(){
         $('.bounced').show();
@@ -141,8 +103,64 @@ $(function(){
 	    var adHeight = $(".slider li").height();
 	    $(".slider").stop(true,false).animate({"margin-top" : -adHeight*index},500);//stop可选。规定是否停止被选元素的所有加入队列的动画。可选。规定是否允许完成当前的动画
 	}
-       
     
+	
+	//首页出现动画
+	function pin(){
+		$(".header").animate({opacity:"1"},1000,function(){
+	    	$(".loimg img").animate({opacity:"1"},1000,function(){
+				$(".loimg h2").animate({opacity:"1"},1000,function(){
+					$(".loimg p").addClass("sh");
+				});
+			});
+		});
+	};
+	
+	
+	
+	
+	
+	//公告部分 ---离线储存
+    //点击小差号，关闭弹出层
+    $('.closebtn').on('click touchstart',function(){
+        storeDisplay();  //存储信息，将存储属性设置为"1"
+        $('.noticemask').hide();
+        pin();
+    });
+    //本地存储访客是否第一次访问
+    var strModel="value";
+    //公告调用
+    var storeDisplay=function(){
+    var modelDisplay=1;      //定义存储对象的属性值
+    //存储，IE6~IE7 cookie 其他浏览器HTML5本地存储
+    if(window.localStorage) {
+        localStorage.setItem(strModel,modelDisplay);  //进行本地存储
+        } else {
+        Cookie.write(strModel,modelDisplay);   //进行Cookie存储
+        }
+    };
+    //检测触发是否显示弹窗
+    var strStoreDate=window.localStorage ? localStorage.getItem(strModel) : Cookie.read(strModel);      //检测浏览器是否支持localStorage
+	if(strStoreDate != "1"){    //如果属性值不为1则显示弹框
+        $('.noticemask').show();
+    } else {
+    	$('.noticemask').hide();
+    	pin();
+    }
+	
+
+	
+
+	
+	//头部导航
+	function heNav(){
+		$(".nav").on('click',function(){
+        	$(".nav ul").slideToggle()
+        });
+	}
+	
+
+	
     
 	//获取浏览器宽度判断是否小于1024
     var _width = $(window).width();
@@ -175,12 +193,7 @@ $(function(){
 
 
 
-	//头部导航
-	function heNav(){
-		$(".nav").on('click',function(){
-        	$(".nav ul").slideToggle()
-        });
-	}
+
 	
 
 });
