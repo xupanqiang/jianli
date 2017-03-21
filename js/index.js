@@ -184,6 +184,7 @@ $(function(){
             //alert('横屏状态！');  
             $(".exper>ul>li:lt(4)").css("display","block");
             $(".nav").unbind("click");
+            $(".exper>ul>li:gt(3) a").attr("onclick","return false");
         }     
     }, false);  
 
