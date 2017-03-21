@@ -142,8 +142,8 @@ $(function(){
         
 	//获取浏览器宽度判断是否小于1024
     var _width = $(window).width();
-    if (_width < 320) {
-    	//头部导航
+    if (_width < 1024) {
+    	heNav()
         
     } else if(_width > 768){
 
@@ -154,9 +154,7 @@ $(function(){
 	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {   
         if (window.orientation === 180 || window.orientation === 0) {    
             //alert('竖屏状态！');
-            $(".nav").on('click',function(){
-	        	$(".nav ul").slideToggle()
-	        });
+            heNav()
 	        $(".exper>ul>li:lt(4)").css("display","none");
             window.addEventListener("onorientationchange"  in window  ? "orientationchange" : "resize",hengpin,false);
         }    
@@ -167,5 +165,18 @@ $(function(){
         }     
     }, false);  
 
+
+
+
+
+
+
+	//头部导航
+	function heNav(){
+		$(".nav").on('click',function(){
+        	$(".nav ul").slideToggle()
+        });
+	}
+	
 
 });
