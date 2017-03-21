@@ -172,6 +172,10 @@ a {
     position: relative;
     float: right;
 }
+.nav ul{
+	position:relative;
+	display: block;
+}
 .nav li{
     width: 1%;
     display: table-cell;
