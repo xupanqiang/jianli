@@ -23,7 +23,7 @@ html {font-size: 75% !important;}
     margin-top:-169px;
     margin-left:-128px;
 }
-.upgradeNotice{display: none;}
+.closenotice{display: none;}
 /*专业技能*/
 .main-servic li{
 	width:50%;
@@ -75,3 +75,7 @@ html {font-size: 75% !important;}
 	margin-top: 45%;
 }
 }
+
+
+
+
