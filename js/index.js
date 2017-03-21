@@ -34,6 +34,7 @@ $(function(){
 			 	$(".exper>ul>li:lt(4)").css("display","none");
 			} else {
 				$(".exper>ul>li:lt(4)").css("display","block");
+				$(".exper>ul>li:lt(4) .int-link img").css("width","auto");
 			} 
 			}
 		}
@@ -139,7 +140,9 @@ $(function(){
 	    var adHeight = $(".slider li").height();
 	    $(".slider").stop(true,false).animate({"margin-top" : -adHeight*index},500);//stop可选。规定是否停止被选元素的所有加入队列的动画。可选。规定是否允许完成当前的动画
 	}
-        
+       
+    
+    
 	//获取浏览器宽度判断是否小于1024
     var _width = $(window).width();
     if (_width < 1024) {
