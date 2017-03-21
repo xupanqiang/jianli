@@ -30,7 +30,7 @@ $(function(){
 			$(".demo .main-he").append("");
 			for(var p in data.demo_list){
 				$(".exper ul").append("<li><a href="+ data.demo_list[p].href +" target='_blank'><img src="+ data.demo_list[p].img +" class='exp'><span class='intro'></span><div class='had-link'><p class='int-had'>"+ data.demo_list[p].had +"</p><p class='int-link'><img src="+ data.demo_list[p].lImg +" alt='轻蚁传播'></p></div></a></li>");
-			if($(window).width()<768){
+			if($(window).width()<1024){
 			 	$(".exper>ul>li:lt(4)").css("display","none");
 			}
 			}
@@ -140,7 +140,7 @@ $(function(){
         
 	//获取浏览器宽度判断是否小于1024
     var _width = $(window).width();
-    if (_width < 768) {
+    if (_width < 1024) {
     	//头部导航
         $(".nav").on('click',function(){
         	$(".nav ul").slideToggle()
