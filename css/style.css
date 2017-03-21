@@ -10,7 +10,7 @@
     outline: none;
 }
 
-body {
+body{
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
@@ -25,6 +25,7 @@ body {
     background: #fff;
     overflow: hidden;
 }
+
 
 input,
 textarea {
@@ -695,6 +696,9 @@ html {font-size: 87.5% !important;}
 .head,.resume, .skill, .experience,.demo{width:80%;}
 .exper{width:80%}
 .exper>ul{margin-top:12rem}
+}
+@media screen and (max-width:1024px) {
+.main-servic p{font-size:12px}
 }
 
 
