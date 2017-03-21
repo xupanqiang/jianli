@@ -33,6 +33,7 @@ $(function(){
 			if($(window).width()<1024){
 				//我的作品前4个隐藏
 			 	$(".exper>ul>li:lt(4)").css("display","none");
+			 	$(".exper>ul>li:gt(3) a").attr("onclick","return true");
 			} else {
 				$(".exper>ul>li:lt(4)").css("display","block");
 				$(".exper>ul>li:lt(4) .int-link img").css("width","auto");
@@ -178,6 +179,7 @@ $(function(){
             //alert('竖屏状态！');
             heNav()
 	        $(".exper>ul>li:lt(4)").css("display","none");
+	        $(".exper>ul>li:gt(3) a").attr("onclick","return true");
             window.addEventListener("onorientationchange"  in window  ? "orientationchange" : "resize",hengpin,false);
         }    
         if (window.orientation === 90 || window.orientation === -90 ){    
