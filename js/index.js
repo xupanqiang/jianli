@@ -163,6 +163,7 @@ $(function(){
         if (window.orientation === 90 || window.orientation === -90 ){    
             //alert('横屏状态！');  
             $(".exper>ul>li:lt(4)").css("display","block");
+            $(".nav").unbind("click");
         }     
     }, false);  
 
