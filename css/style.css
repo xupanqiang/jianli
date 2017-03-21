@@ -470,11 +470,13 @@ a {
     height: 100%;
 }
 .had-link p{
+	width:100%;
     margin-top:2rem;
     text-align:center;
     color:#fff;
     opacity: 0
 }
+.int-link img{width:70%}
 .int-had{
     -webkit-transition: all .2s ease-in-out 0s;
     -moz-transition: all .2s ease-in-out 0s;
