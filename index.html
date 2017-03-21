@@ -4,19 +4,16 @@
     <meta content="text/html;charset=utf-8" http-equiv="content-type">
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
     <title>web前端-徐盼强</title>
-    <link href="css/fullPage.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="css/fullPage.css" rel="stylesheet" type="text/css"/>-->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/phone.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/fullPage.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
 </head>
 
 <body>
 	<!--底部开始-->
 	<div class="upgradeNotice">
 		<div class="noticebody">
-			<p>个人简历网站部分功能没有实现，后期会逐一添加。如果贵公司缺少前端工程师，可以直接联系我。电话：13439810980 邮箱：541592004@qq.com</p>
+			<p>个人简历网站部分功能没有实现，后期会逐一添加。如果贵公司缺少前端工程师，可以直接联系我。电话：<a href="tel:13439810980">13439810980</a> 邮箱：<a href="541592004@qq.com">541592004@qq.com</a></p>
 		</div>
 		<div class="closenotice"><img src="img/closenotice.png" alt="" /></div>
 	</div>
@@ -52,18 +49,18 @@
                 <h1>求职：前端工程师</h1>
             </div>
             <nav class="nav">
-                <ul id="navBar">                
+                <ul class="navBar">                
                     <li class="current">
-                        <a href="#">个人简历<br/><b>RESUME</b></a>
+                        <a href="#page1">个人简历<br/><b>RESUME</b></a>
                     </li>
                     <li>
-                        <a href="#">专业技能<br/><b>SKILL</b></a>
+                        <a href="#page2">专业技能<br/><b>SKILL</b></a>
                     </li>
                     <li>
-                        <a href="#">我的经历<br/><b>EXPERIENCE</b></a>
+                        <a href="#page3">我的经历<br/><b>EXPERIENCE</b></a>
                     </li>
                     <li>
-                        <a href="#">我的作品<br/><b>DEMO</b></a>
+                        <a href="#page4">我的作品<br/><b>DEMO</b></a>
                     </li>
                     <li>
                         <a href="前端-徐盼强.pdf" target="_blank">下载简历<br/><b>CONTACT ME</b></a>
@@ -76,7 +73,7 @@
     <!--内容-->
     <div id="pageContain">
         <!--个人简历-->
-        <div class="page page1 current">
+        <div class="section one fp-section">
             <div class="resume">
                 <div class="loimg">
                     <img src="img/logo.jpg">
@@ -85,7 +82,7 @@
             </div>
         </div>
         <!--专业技能-->
-        <div class="page page2">
+        <div class="section two fp-section">
             <div class="skill">
                 <div class="main-home">
                     <div class="main-he">
@@ -129,7 +126,7 @@
             </div>
         </div>
         <!--我的经历-->
-        <div class="page page3">
+        <div class="section three fp-section">
             <div class="experience">
                 <div class="main-home">
                     <div class="main-he">
@@ -151,7 +148,7 @@
             </div>
         </div>
         <!--我的作品-->
-        <div class="page page4">
+        <div class="section four fp-section">
             <div class="demo">
                 <div class="main-home">
                     <div class="main-he">
@@ -193,4 +190,7 @@ include("1.js") // 使用手机打开
 include("js/fullPage.min.js") // 使用电脑打开
 }
 </script>-->
+<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
 </html>
