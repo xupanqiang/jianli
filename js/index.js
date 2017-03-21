@@ -30,11 +30,26 @@ $(function(){
 			$(".demo .main-he").append("");
 			for(var p in data.demo_list){
 				$(".exper ul").append("<li><a href="+ data.demo_list[p].href +" target='_blank'><img src="+ data.demo_list[p].img +" class='exp'><span class='intro'></span><div class='had-link'><p class='int-had'>"+ data.demo_list[p].had +"</p><p class='int-link'><img src="+ data.demo_list[p].lImg +" alt='轻蚁传播'></p></div></a></li>");
-			if($(window).width()<1024){
-			 	$(".exper>ul>li:lt(4)").css("display","none");
-			} else {
-				$(".exper>ul>li:lt(4)").css("display","block");
-			}
+//			if($(window).width()<1024){
+//			 	$(".exper>ul>li:lt(4)").css("display","none");
+//			} else {
+//				$(".exper>ul>li:lt(4)").css("display","block");
+//			}
+		    //判断竖屏还是横屏
+			window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {   
+		        if (window.orientation === 180 || window.orientation === 0) {    
+		            //alert('竖屏状态！');
+		            $(".nav").on('click',function(){
+			        	$(".nav ul").slideToggle()
+			        });
+			        $(".exper>ul>li:lt(4)").css("display","none");
+		            window.addEventListener("onorientationchange"  in window  ? "orientationchange" : "resize",hengpin,false);
+		        }    
+		        if (window.orientation === 90 || window.orientation === -90 ){    
+		            //alert('横屏状态！');   
+		            $(".exper>ul>li:lt(4)").css("display","block");
+		        }     
+		    }, false);   
 			}
 		}
 	});
@@ -142,29 +157,20 @@ $(function(){
         
 	//获取浏览器宽度判断是否小于1024
     var _width = $(window).width();
-    if (_width < 1024) {
+    if (_width < 320) {
     	//头部导航
-        $(".nav").on('click',function(){
-        	$(".nav ul").slideToggle()
-        })
         
+        
+    } else if(_width < 1024){
+//  	$(".nav").on('click',function(){
+//      	$(".nav ul").slideToggle()
+//      });
+//      $(".exper>ul>li:lt(4)").css("display","none");
+
     } else {
-
-
+    	
     }
-    
-	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {   
-        if (window.orientation === 180 || window.orientation === 0) {    
-            //alert('竖屏状态！');
-            $(".nav").on('click',function(){
-	        	$(".nav ul").slideToggle()
-	        })
-            window.addEventListener("onorientationchange"  in window  ? "orientationchange" : "resize",hengpin,false);
-        }    
-        if (window.orientation === 90 || window.orientation === -90 ){    
-            //alert('横屏状态！');   
-        }     
-    }, false);   
+
 
 
 });
