@@ -31,6 +31,7 @@ $(function(){
 			for(var p in data.demo_list){
 				$(".exper ul").append("<li><a href="+ data.demo_list[p].href +" target='_blank'><img src="+ data.demo_list[p].img +" class='exp'><span class='intro'></span><div class='had-link'><p class='int-had'>"+ data.demo_list[p].had +"</p><p class='int-link'><img src="+ data.demo_list[p].lImg +" alt='轻蚁传播'></p></div></a></li>");
 			if($(window).width()<1024){
+				//我的作品前4个隐藏
 			 	$(".exper>ul>li:lt(4)").css("display","none");
 			} else {
 				$(".exper>ul>li:lt(4)").css("display","block");
@@ -72,11 +73,11 @@ $(function(){
 	//底部点击查号关闭弹出右侧栏
 	$('.closenotice').on('click',function(){
         $('.upgradeNotice').slideUp("slow");
-        $('.side').show();
+//      $('.side').show();
     });
     $('.gototop').on('click',function(){
         $('.upgradeNotice').slideDown("slow");
-        $('.side').hide();
+//      $('.side').hide();
     });
 	
 	//首页出现动画
