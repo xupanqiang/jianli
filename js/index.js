@@ -29,7 +29,10 @@ $(function(){
 			//我的作品
 			$(".demo .main-he").append("");
 			for(var p in data.demo_list){
-				$(".exper ul").append("<li><img src="+ data.demo_list[p].img +" class='exp'><span class='intro'></span><div class='had-link'><p class='int-had'>"+ data.demo_list[p].had +"</p><p class='int-link'><a href="+ data.demo_list[p].href +" target='_blank'><img src="+ data.demo_list[p].lImg +" alt='轻蚁传播'></a></p></div></li>");
+				$(".exper ul").append("<li><a href="+ data.demo_list[p].href +" target='_blank'><img src="+ data.demo_list[p].img +" class='exp'><span class='intro'></span><div class='had-link'><p class='int-had'>"+ data.demo_list[p].had +"</p><p class='int-link'><img src="+ data.demo_list[p].lImg +" alt='轻蚁传播'></p></div></a></li>");
+			if($(window).width()<768){
+			 	$(".exper>ul>li:lt(4)").css("display","none");
+			}
 			}
 		}
 	});
@@ -73,7 +76,7 @@ $(function(){
         $('.side').hide();
     });
 	
-	//首页出现
+	//首页出现动画
 	function pin(){
 		$(".header").animate({opacity:"1"},1000,function(){
 	    	$(".loimg img").animate({opacity:"1"},1000,function(){
@@ -82,62 +85,70 @@ $(function(){
 				});
 			});
 		});
-	}
-    
+	};
+	
+
 	
 	//整屏幕滚动
-	var runPage;
-	runPage = new FullPage({
-	    id: 'pageContain',
-	    slideTime: 800,
-	    effect: {
-	        transform: {
-	            translate: 'Y'
-	        },
-	        opacity: [0, 1]
-	    },
-	    mode: 'wheel, touch, nav:navBar',
-	    easing: 'ease',
-	    callback: function(index, thisPage){
-	        if(index==0){
-	           // alert("第一屏");
-	        }
-	        if(index==1){
-	            // alert("第二屏");
-	        }
-	    }
-	});	
+    $('#pageContain').fullpage({
+		scrollingSpeed: 500,
+		css3: false,
+		resize: true,
+		anchors: ["page1","page2","page3","page4"],
+		verticalCentered: false,
+		afterRender: function(){},
+		afterLoad: function(anchorLink,index){
+			if(index==1){
+				$(".navBar li").eq(0).addClass("current").siblings().removeClass("current");
+			}
+			if(index==2){
+				$(".navBar li").eq(1).addClass("current").siblings().removeClass("current");
+			}
+			if(index==3){
+				$(".navBar li").eq(2).addClass("current").siblings().removeClass("current");
+			}
+			if(index==4){
+				$(".navBar li").eq(3).addClass("current").siblings().removeClass("current");
+			}
+		},
+		onLeave:function(index , nextIndex, direction){
+			if(index==2||index==3||index==4||index==5||index==6){
+				$(".title_en").remove();	
+			}
+		}
+	});
+	
+	//我的作品更多
+	$('.servic-p i').on('click',function(){
+        $('.bounced').show();
+    });
+    $(".md-close").on('click',function(){
+        $(".bounced").hide();
+    });
 	
 	
-	
+	// 我的经历轮播
+	$(".num li").click(function() {
+        var index = $(".num li").index(this);
+        $(this).addClass("on").siblings().removeClass("on")
+        showImg(index);
+    });
+    function showImg(index){
+	    var adHeight = $(".slider li").height();
+	    $(".slider").stop(true,false).animate({"margin-top" : -adHeight*index},500);//stop可选。规定是否停止被选元素的所有加入队列的动画。可选。规定是否允许完成当前的动画
+	}
+        
 	//获取浏览器宽度判断是否小于1024
     var _width = $(window).width();
-    if (_width < 1024) {
+    if (_width < 768) {
+    	//头部导航
+        $(".nav").on('click',function(){
+        	$(".nav ul").slideToggle()
+        })
         
     } else {
 
-	    //我的作品更多
-    	$('.servic-p i').on('click',function(){
-	        $('.bounced').show();
-	    });
-	    $(".md-close").on('click',function(){
-	        $(".bounced").hide();
-	    });
-	    
-    
-     	// 我的经历轮播
-  		$(".num li").click(function() {
-            var index = $(".num li").index(this);
-            $(this).addClass("on").siblings().removeClass("on")
-            showImg(index);
-        });
-        function showImg(index){
-		    var adHeight = $(".slider li").height();
-		    $(".slider").stop(true,false).animate({"margin-top" : -adHeight*index},500);//stop可选。规定是否停止被选元素的所有加入队列的动画。可选。规定是否允许完成当前的动画
-		}
-        
-        	
-        
+
     }
     
 
