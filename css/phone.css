@@ -1,21 +1,77 @@
-@media screen and (max-width:768px) {
-html {font-size: 87.5% !important;}
-.header{overflow: auto;}
+
+@media screen and (max-width:768px){
+html {font-size: 75% !important;}
+.head, .resume, .skill, .experience, .demo{
+	width:100%
+}
+.header{overflow:visible;}
+.logo h1{display: none;}
 
 .logo{width:100%;text-align:center}
-.logo img {
-    width: auto;
-    height: 70px;
-}
-.nav{}
+.nav{position: absolute;top:0;right:0;width:100%;}
+.nav:before{content:"";position: absolute;top:50%;margin-top:-9px;right:2rem;width:20px;height:17px;background:url(../img/nav.png) right no-repeat;}
+.nav ul{position: absolute;top:5rem;width:100%;left:0;background: rgba(0,0,0,0.6);display: none;}
+.nav li{display: block;color:#fff;width:100%}
+.nav li:hover{color:#e60012;background:none}
+.nav .current{color:#e60012;background:none}
+.nav li a{text-align:left}
 
 
 .noticemask .notice{
-	width: 80%;
-    height: 57%;
-    margin:0;
-    top: 20%;
-    left: 10%;
+	width: 256px;
+    height: 338px;
+    margin-top:-169px;
+    margin-left:-128px;
+}
+.upgradeNotice{display: none;}
+/*专业技能*/
+.main-servic li{
+	width:50%;
+	height:150px
+}
+.main-servic {
+	margin-top: 35%;
+}
+.main-servic li{
+	margin-top: 10%;
+}
+.main-servic li u{
+	width:100px;
+	height:100px;
+	margin-left:-50px
+}
+.main-servic i {
+    width: 50px;
+    height: 57px;
+    margin-left: -23px;
+    margin-top: 23px;
+
+}
+.hon{display: none;}
+
+/*我的经历*/
+.company {
+	width:80%;
+	height:400px;
+	background:#cecece
+}
+.num {top:1rem;left:1rem}
+.num li{height:auto;width:25%;margin-top:5%}
+.experience .main-servic li{margin:0}
+.experience .slider li{height:400px}
+.slider h2{line-height: 25px;padding:4rem 1rem 1rem 1rem}
+.slider p {width:auto;padding:0 1rem;margin-top:5px}
+.main-servic p{font-size:12px}
+/*我的作品*/
+.exper>ul>li{width:48%}
+.had-link{display: none;}
 }
 
+
+@media screen and (max-width:320px){
+.loimg h2{line-height:2rem}
+.loimg p{line-height:2rem}
+.main-servic {
+	margin-top: 45%;
+}
 }
