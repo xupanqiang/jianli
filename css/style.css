@@ -204,7 +204,7 @@ a {
 }
 .nav b {
     font-size: 12px;
-    line-height: 1em;
+    line-height: 2em;
 }
 .current { background: #e60012;color: #fff;}
 
