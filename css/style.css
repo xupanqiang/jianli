@@ -224,7 +224,6 @@ a {
 .loimg h2{line-height:5rem;opacity: 0;}
 .loimg p{
 	line-height:3rem;
-	opacity: 0;
 	-webkit-transition: all .5s ease-in-out 0s;
     -moz-transition: all .5s ease-in-out 0s;
     -ms-transition: all .5s ease-in-out 0s;
@@ -340,22 +339,22 @@ a {
     background:#e60012;
     height:330px;
     z-index:9;
-    -webkit-transform:translateY(330px) translateZ(0);
-    -moz-transform:translateY(330px) translateZ(0);
-    -ms-transform:translateY(330px) translateZ(0);
-    -o-transform:translateY(330px) translateZ(0);
-    transform:translateY(330px) translateZ(0)
+    -webkit-transform:translateY(330px);
+    -moz-transform:translateY(330px);
+    -ms-transform:translateY(330px);
+    -o-transform:translateY(330px);
+    transform:translateY(330px)
 }
 .main-servic li:hover .hon{
-    -webkit-transform:translateY(0) translateZ(0);
+    -webkit-transform:translateY(0);
     -webkit-transition:-webkit-transform 0.2s ease-in-out 0.7s;
-    -moz-transform:translateY(0) translateZ(0);
+    -moz-transform:translateY(0);
     -moz-transition:-moz-transform 0.2s ease-in-out 0.7s;
-    -ms-transform:translateY(0) translateZ(0);
+    -ms-transform:translateY(0);
     -ms-transition:-ms-transform 0.2s ease-in-out 0.7s;
-    -o-transform:translateY(0) translateZ(0);
+    -o-transform:translateY(0);
     -o-transition:-o-transform 0.2s ease-in-out 0.7s;
-    transform:translateY(0) translateZ(0);
+    transform:translateY(0);
     transition:transform 0.2s ease-in-out 0.7s
 }
 .servic-h3{color:#fff;line-height:60px;position: relative;z-index:10;margin-top:20px;}
