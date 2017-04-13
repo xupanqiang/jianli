@@ -26,15 +26,15 @@ html {font-size: 75% !important;}
 
 /*专业技能*/
 .main-servic li{
-	width:50%;
+
 	height:150px
 }
 .main-servic {
 	margin-top: 35%;
 }
-.main-servic li{
+/*.main-servic li{
 	margin-top: 10%;
-}
+}*/
 .main-servic li u{
 	width:100px;
 	height:100px;
