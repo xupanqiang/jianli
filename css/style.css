@@ -223,6 +223,7 @@ a {
 .loimg img{width:8.75rem;height:auto;border-radius: 50%;opacity: 0;}
 .loimg h2{line-height:5rem;opacity: 0;}
 .loimg p{
+	opacity:0;
 	line-height:3rem;
 	-webkit-transition: all .5s ease-in-out 0s;
     -moz-transition: all .5s ease-in-out 0s;
@@ -255,7 +256,7 @@ a {
 .servic-p i{color:#E60012;cursor: pointer;}
 
 .main-servic{position: relative;width: 100%;margin-top:4rem;overflow: hidden;}
-.main-servic li{float:left;width:25%;text-align: center;position: relative;height:330px;overflow: hidden;}
+.main-servic li{float:left;width:33%;text-align: center;position: relative;height:330px;overflow: hidden;}
 .main-servic li u{
     top:0;
     display: block;
@@ -301,7 +302,7 @@ a {
     background-size: 100% 100%;
 }
 .main-servic .uisj{
-    background:url(../img/ng.png) center no-repeat;
+    background:url(../img/seo.png) center no-repeat;
     background-size: 100% 100%;
 }
 
